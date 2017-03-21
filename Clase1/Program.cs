@@ -1,6 +1,22 @@
 using System;
 using System.Collections.Generic;
 
+public static class DoubleExtensions
+{        
+    public static double Sin(this double value)
+    {
+        return Math.Sin(value);
+    }
+}
+
+public static class StringExtension
+{   
+    public static string Reverse(this string value) 
+    {
+        return value;
+    }
+}
+
 class Clase1
 {
     static void Main(string[] args)
@@ -26,8 +42,13 @@ class Clase1
 
         // Método genérico (no necesariamente implica una clase genérica)
         Swap<string>(x, y);
-    }
 
+        double result = 123;
+        Console.WriteLine(result.Sin());
+
+        //string reverse = "hello".Reverse();
+        //string reverse = StringExtension.Reverse("hello");
+    }
     static void Swap<T>(T x, T y) 
     {
         
