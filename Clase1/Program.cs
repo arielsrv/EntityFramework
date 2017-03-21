@@ -20,6 +20,17 @@ class Clase1
         MyCollection<int> numbers = new MyCollection<int>();
         numbers.Add(1);
         //numbers.Add("Hello world!"); // Esta línea no compila porque fue declarada cómo Int.32.
+
+        string x = "cadena 1";
+        string y = "cadena 2";
+
+        // Método genérico (no necesariamente implica una clase genérica)
+        Swap<string>(x, y);
+    }
+
+    static void Swap<T>(T x, T y) 
+    {
+        
     }
 
     class MyCollection<T>
