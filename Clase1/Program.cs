@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using static System.Console;
 
+namespace EF 
+{
+    
 public static class DoubleExtensions
 {        
     public static double Sin(this double value)
@@ -73,6 +76,9 @@ class Clase1
         WriteLine(customer.Id);
         WriteLine(customer.FirstName);
         WriteLine(customer.LastName);        
+
+        MyType myType = new MyType();
+        myType.X();
     }
 
     static void Swap<T>(T x, T y) 
@@ -87,4 +93,6 @@ class Clase1
             //TBD
         }
     }
+}
+
 }
