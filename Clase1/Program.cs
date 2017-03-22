@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using static System.Console;
 
 public static class DoubleExtensions
 {        
@@ -21,12 +22,7 @@ class Clase1
 {
     static void Main(string[] args)
     {
-        List<int> values = new List<int>();
-        values.Add(1);
-        values.Add(2);
-        values.Add(3);
-        values.Add(4);
-        values.Add(5);
+        List<int> values = new List<int> {1, 2, 3, 4, 5};
 
         foreach (int item in values) 
         {
@@ -66,23 +62,17 @@ class Clase1
 
         value = 123;
 
-
-        Customer customer1 = new Customer();
-        customer1.Id = 123;
-        customer1.Name = "Jorge Sanchez";
-
-        var customer2 = new Customer()
+        var customer = new
         {
             Id = 123,
-            Name = "Jorge Sanchez"            
+            FirstName = "Jorge",
+            LastName = "Sanchez"          
         };
         //Customer customer = new Customer(123, "Jorge Sanchez");
-    }
 
-    class Customer
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        WriteLine(customer.Id);
+        WriteLine(customer.FirstName);
+        WriteLine(customer.LastName);        
     }
 
     static void Swap<T>(T x, T y) 
