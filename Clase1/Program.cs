@@ -48,7 +48,43 @@ class Clase1
 
         //string reverse = "hello".Reverse();
         //string reverse = StringExtension.Reverse("hello");
+
+        int i  = 123;
+
+        var a = 123;
+        
+        var cadena = default(string);
+        cadena = string.Empty;
+
+        // cadena = 123; "NO COMPILA"
+
+        List<List<int>> myList1 = new List<List<int>>();
+        var myList2 = new List<List<int>>();
+
+        dynamic value = "Hello world";
+        value.RompeTodo();
+
+        value = 123;
+
+
+        Customer customer1 = new Customer();
+        customer1.Id = 123;
+        customer1.Name = "Jorge Sanchez";
+
+        var customer2 = new Customer()
+        {
+            Id = 123,
+            Name = "Jorge Sanchez"            
+        };
+        //Customer customer = new Customer(123, "Jorge Sanchez");
     }
+
+    class Customer
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
     static void Swap<T>(T x, T y) 
     {
         
