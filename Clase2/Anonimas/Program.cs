@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Delegados
+namespace Anonimos
 {
     public class Program
     {
@@ -10,16 +10,11 @@ namespace Delegados
 
         private static void Main(string[] args)
         {
-            MyDelegate f = Sum;
+            MyDelegate f = delegate (int a, int b) { return a + b; };
             int result = f(2, 3);
 
-            Print print = Console.WriteLine;
+            Print print = delegate (int value) { Console.WriteLine(value); };
             print(result);
-        }
-
-        private static int Sum(int a, int b)
-        {
-            return a + b;
-        }
+        }               
     }
 }
