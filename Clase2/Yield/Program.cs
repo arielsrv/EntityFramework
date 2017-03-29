@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Yield
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             IEnumerable<string> messages = GetMessages();
-            
+
             // Lazy Loading ó carga diferida
             foreach (string message in messages)
             {
@@ -19,7 +16,7 @@ namespace Yield
             }
         }
 
-        static IEnumerable<string> GetMessages()
+        private static IEnumerable<string> GetMessages()
         {
             yield return "hola";
             yield return "este";
