@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegadosGenericos", "Deleg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colecciones", "Colecciones\Colecciones.csproj", "{EB0D36B7-18F3-4577-AA1E-694B775BB83E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yield", "Yield\Yield.csproj", "{B13CBDC2-86CC-430F-A135-A5F77E7BE0E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EB0D36B7-18F3-4577-AA1E-694B775BB83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB0D36B7-18F3-4577-AA1E-694B775BB83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB0D36B7-18F3-4577-AA1E-694B775BB83E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13CBDC2-86CC-430F-A135-A5F77E7BE0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13CBDC2-86CC-430F-A135-A5F77E7BE0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13CBDC2-86CC-430F-A135-A5F77E7BE0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13CBDC2-86CC-430F-A135-A5F77E7BE0E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
