@@ -1,5 +1,6 @@
 ﻿using Collections;
 using System;
+using static System.Console;
 
 namespace ConsoleApp
 {
@@ -11,8 +12,11 @@ namespace ConsoleApp
 
             foreach (var item in collection)
             {
-                Console.WriteLine(item);
+                WriteLine(item);
             }
+
+            int first = collection.First();
+            WriteLine($"Primer elemento: {first}");
         }
     }
 }
