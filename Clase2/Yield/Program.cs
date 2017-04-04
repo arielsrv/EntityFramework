@@ -26,5 +26,23 @@ namespace Yield
             yield return "la instruccion";
             yield return "yield";
         }
+
+        /// <summary>
+        /// Ejemplo de Mensajes cargados por completo en Memoria
+        /// </summary>
+        /// <returns></returns>
+        //private static IEnumerable<string> GetMessages()
+        //{
+        //    return new List<string>
+        //    {
+        //        "hola",
+        //        "este",
+        //        "es",
+        //        "un ejemplo",
+        //        "del uso de ",
+        //        "la instruccion",
+        //        "yield"
+        //    };
+        //}
     }
 }
