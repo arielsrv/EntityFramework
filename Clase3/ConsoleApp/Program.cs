@@ -9,7 +9,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            MyCollection<int> collection = new MyCollection<int> { 2, 5, 1, 19, 10, 3 };
+            var collection = new MyCollection<int> { 2, 5, 1, 19, 10, 3 };
             foreach (var item in collection)
             {
                 WriteLine(item);
@@ -51,12 +51,30 @@ namespace ConsoleApp
                 WriteLine(item);
             }
 
+            // Sintaxis de Métodos de Extensión
             var result5 = collection
                 .From(1)
                 .Find(x => x > 2)
                 .Map(x => x * 2)
                 .Reduce((total, item) => total = total + item);
-            WriteLine($"\tBienvenidos al mundo de LinQ: {result5}");           
+            WriteLine($"\tBienvenidos al mundo de LinQ: {result5}");
+
+            // Sintaxis de consultas SQL (o ANSI).
+            var result6 = from item in collection
+                          select item;
+
+            var result7 = from item in collection
+                          where item > 2
+                          select item;
+
+            var result8 = from item in collection
+                          where item > 2
+                          select item * 2;
+
+            var result9 = (from item in collection
+                          where item > 2
+                          select item * 2)
+                          .Select((total, item) => total = total + item);
         }
     }
 }
