@@ -10,13 +10,12 @@ namespace App
         {
             using (NorthwindDb db = new NorthwindDb())
             {
-                var category = new Category
-                {
-                    CategoryName = "Chinese Food",
-                    Description = "Food from china city",
-                };
+                var category = db.Categories
+                    .Where(x => x.CategoryName.Contains("Chinese"))
+                    .First();
 
-                db.Categories.Add(category);
+                category.CategoryName = "Chinese ONly";
+                
                 db.SaveChanges();                
             }
         }
