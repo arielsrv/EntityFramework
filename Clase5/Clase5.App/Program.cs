@@ -22,7 +22,7 @@ namespace Clase5.App
 
                 db.People.Add(student);
                 db.SaveChanges();
-            }
+            };
 
         }
     }

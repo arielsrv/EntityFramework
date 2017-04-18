@@ -6,5 +6,6 @@ namespace Clase5.Model
     public class Instructor : Person
     {
         public double Salary { get; set; }
+        public Course Course { get; set; }
     }
 }

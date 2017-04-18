@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Clase5.Model
 {
@@ -6,5 +7,6 @@ namespace Clase5.Model
     public class Student : Person
     {
         public double Fee { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }
