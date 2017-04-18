@@ -11,12 +11,19 @@ namespace Clase5.App
     {
         static void Main(string[] args)
         {
-            Student student = new Student
+            using (UniversityDb db = new UniversityDb())
             {
-                FirstName = "Jorge",
-                LastName = "Sanchez",
-                Fee = 5000.0
-            };
+                Student student = new Student
+                {
+                    FirstName = "Jorge",
+                    LastName = "Sanchez",
+                    Fee = 5000.0
+                };
+
+                db.People.Add(student);
+                db.SaveChanges();
+            }
+
         }
     }
 }
