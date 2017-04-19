@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Clase5.Model
 {
-    public class Person
+    public abstract class Person
     {
         public int Id { get; set; }
 

@@ -13,17 +13,24 @@ namespace Clase5.App
         {
             using (UniversityDb db = new UniversityDb())
             {
-                Student student = new Student
-                {
-                    FirstName = "Jorge",
-                    LastName = "Sanchez",
-                    Fee = 5000.0
-                };
+                //Student student = new Student
+                //{
+                //    FirstName = "Jorge",
+                //    LastName = "Sanchez",
+                //    Fee = 5000.0
+                //};
 
                 //db.People.Add(student);
                 //db.SaveChanges();
 
-                Console.WriteLine(student.Id);
+                var students = db.People.OfType<Student>();
+
+                foreach (var student in students)
+                {
+                    Console.WriteLine(student.Id);
+                    Console.WriteLine(student.FirstName);
+                    Console.WriteLine(student.LastName);
+                }
             };
 
         }
