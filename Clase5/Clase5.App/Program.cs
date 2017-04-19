@@ -1,6 +1,8 @@
 ﻿using Clase5.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,21 +17,35 @@ namespace Clase5.App
             {
                 //Student student = new Student
                 //{
-                //    FirstName = "Jorge",
-                //    LastName = "Sanchez",
+                //    FirstName = "Cecilia",
+                //    LastName = "Fernandez",
                 //    Fee = 5000.0
                 //};
 
                 //db.People.Add(student);
                 //db.SaveChanges();
 
-                var students = db.People.OfType<Student>();
+                var result = db.People.OfType<Student>();
 
-                foreach (var student in students)
+                foreach (var item in result)
                 {
-                    Console.WriteLine(student.Id);
-                    Console.WriteLine(student.FirstName);
-                    Console.WriteLine(student.LastName);
+                    Console.WriteLine(item.Id);
+                    Console.WriteLine(item.FirstName);
+                    Console.WriteLine(item.LastName);
+                }
+
+                DbParameter parameter = new SqlParameter("@Id", 1);
+                var student =  db
+                    .Database
+                    .SqlQuery<Student>("GetStudents @Id", parameter);
+
+                Console.WriteLine("Resultado SP: ");
+
+                foreach (var item in student)
+                {
+                    Console.WriteLine(item.Id);
+                    Console.WriteLine(item.FirstName);
+                    Console.WriteLine(item.LastName);
                 }
             };
 
