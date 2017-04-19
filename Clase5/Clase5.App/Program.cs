@@ -20,8 +20,10 @@ namespace Clase5.App
                     Fee = 5000.0
                 };
 
-                db.People.Add(student);
-                db.SaveChanges();
+                //db.People.Add(student);
+                //db.SaveChanges();
+
+                Console.WriteLine(student.Id);
             };
 
         }
